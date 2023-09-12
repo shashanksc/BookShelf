@@ -10,11 +10,14 @@ const SearchForm = () => {
   const navigate = useNavigate();
 
   useEffect(() => searchText.current.focus(), []);
+  const handleOnChange = (event) =>{
+    setSearchTerm(event.target.value)
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     let tempSearchTerm = searchText.current.value.trim();
     if((tempSearchTerm.replace(/[^\w\s]/gi,"")).length === 0){
-      setSearchTerm("Harry");
+      setSearchTerm("lORD");
       setResultTitle("Please Enter Something ...");
     } else {
       setSearchTerm(searchText.current.value);
@@ -29,7 +32,7 @@ const SearchForm = () => {
         <div className='search-form-content'>
           <form className='search-form' onSubmit={handleSubmit}>
             <div className='search-form-elem flex flex-sb bg-white'>
-              <input type = "text" className='form-control' placeholder='Harry ...' ref = {searchText} />
+              <input type = "text" className='form-control' onChange = {handleOnChange} placeholder='Lord ...' ref = {searchText} />
               <button type = "submit" className='flex flex-c' onClick={handleSubmit}>
                 <FaSearch className='text-purple' size = {32} />
               </button>
