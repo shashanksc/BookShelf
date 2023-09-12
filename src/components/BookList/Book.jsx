@@ -1,11 +1,25 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import "./BookList.css";
 
+
+
+
+
 const Book = (book) => {
+  const [showDiv, setShowDiv] = useState((localStorage.getItem(book.id)==null));
+
+ 
   const handleAdd = () =>{
-    localStorage.setItem(book.id, book.title);
-    alert('Book added');
+    if(localStorage.getItem(book.id)!==null){
+      setShowDiv(false);
+      alert('Book is already added');
+    }
+    else{
+      localStorage.setItem(book.id, book.title);
+      setShowDiv(false);
+      alert('Book added');
+    }
+   
   };
   return (
     <div className='book-item flex flex-column flex-sb'>
@@ -35,7 +49,12 @@ const Book = (book) => {
         </div>
        
       </div>
-      <div className='addBtn' onClick={handleAdd}>add to shelf</div>
+      <div>
+      {showDiv && (
+        <div className='addBtn' onClick={handleAdd}>add to shelf</div>
+      )}
+    </div>
+      
     </div>
   )
 }
