@@ -42,21 +42,21 @@ const About = () => {
             <h2 className='about-title fs-26 ls-1'>My BookList</h2>
             <div>
       
-      <ul>
-        {localStorageValues.map((item) => (
-          <li key={item.key}>
-            
-            <div className="centered-div">{item.value}</div>
-            <div className="centered-div">
-            <div className='removeBtn' onClick={() => remove(item.key)}>Remove</div>
-            </div>
-            
-            
-        
-          </li>
-        ))}
-      </ul>
-    </div>
+                <ul>
+                  {localStorageValues.map((item) => (
+                    <li key={item.key}>
+                      
+                      <div className="centered-div">{item.value}</div>
+                      <div className="centered-div">
+                      <div className='removeBtn' onClick={() => remove(item.key)}>Remove</div>
+                      </div>
+                      
+                      
+                  
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
             </div>
         </div>
