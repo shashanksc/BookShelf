@@ -1,6 +1,6 @@
 .search-form{
     width: 110%;
-    max-width: 650px;
+    max-width: 620px;
 }
 .search-form-elem{
     padding: 1rem 2rem;
@@ -9,8 +9,8 @@
 .search-form-elem .form-control{
     font-size: 2rem;
     padding: 0.5rem;
-    width: 50%;
-    max-width: 400px;
+    width: 20%;
+    max-width: 200px;
 }
 .search-form-elem .form-control::placeholder{
     opacity: 0.9;
