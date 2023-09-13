@@ -27,7 +27,7 @@ const Navbar = () => {
           <ul className = "navbar-nav">
 
             <li className='nav-item'>
-              <Link to = "shelf" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>My Shelf</Link>
+              <Link to = "shelf" className='nav-link text-uppercase fs-18 fw-5 ls-1'>My Shelf</Link>
             </li>
           </ul>
         </div>

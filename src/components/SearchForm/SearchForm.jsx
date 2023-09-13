@@ -17,7 +17,7 @@ const SearchForm = () => {
     e.preventDefault();
     let tempSearchTerm = searchText.current.value.trim();
     if((tempSearchTerm.replace(/[^\w\s]/gi,"")).length === 0){
-      setSearchTerm("lORD");
+      setSearchTerm("Sherlock");
       setResultTitle("Please Enter Something ...");
     } else {
       setSearchTerm(searchText.current.value);
@@ -32,7 +32,7 @@ const SearchForm = () => {
         <div className='search-form-content'>
           <form className='search-form' onSubmit={handleSubmit}>
             <div className='search-form-elem flex flex-sb bg-white'>
-              <input type = "text" className='form-control' onChange = {handleOnChange} placeholder='Lord ...' ref = {searchText} />
+              <input type = "text" className='form-control' onChange = {handleOnChange} placeholder='Sherlock ...' ref = {searchText} />
               <button type = "submit" className='flex flex-c' onClick={handleSubmit}>
                 <FaSearch className='text-purple' size = {32} />
               </button>
