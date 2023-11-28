@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 import "./BookList.css";
-
-
-
-
-
 const Book = (book) => {
   const [showDiv, setShowDiv] = useState((localStorage.getItem(book.id)==null));
 

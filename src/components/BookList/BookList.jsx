@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useEffect } from 'react';
 import { useGlobalContext } from '../../context';
 import Book from "../BookList/Book";
 import Loading from "../Loader/Loader";
@@ -8,7 +8,21 @@ import "./BookList.css";
 //https://covers.openlibrary.org/b/id/240727-S.jpg
 
 const BookList = () => {
+  
   const {books, loading, resultTitle} = useGlobalContext();
+  useEffect(() => {
+    // Assuming your search results are displayed and you want to scroll down 200px
+    const scrollDown = () => {
+      window.scrollTo({
+        top:400,
+        behavior: 'smooth'
+      });
+       // Scrolls down 200 pixels from the top of the page
+    };
+    
+    // Call the scrollDown function when the component mounts
+    scrollDown();
+  }, []);
   const booksWithCovers = books.map((singleBook) => {
     return {
       ...singleBook,
@@ -17,7 +31,7 @@ const BookList = () => {
       cover_img: singleBook.cover_id ? `https://covers.openlibrary.org/b/id/${singleBook.cover_id}-L.jpg` : coverImg
     }
   });
-
+  
   if(loading) return <Loading />;
 
   return (
@@ -25,6 +39,7 @@ const BookList = () => {
       <div className='container'>
         <div className='section-title'>
           <h2>{resultTitle}</h2>
+          
         </div>
         <div className='booklist-content grid'>
           {

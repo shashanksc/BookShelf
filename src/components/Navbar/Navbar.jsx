@@ -6,15 +6,21 @@ import {HiOutlineMenuAlt3} from "react-icons/hi";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [userName, setUserName] = useState('');
   const handleNavbar = () => setToggleMenu(!toggleMenu);
+  if(userName==='') {
+    console.log('User not specified');
+  }
+  const addUser = () => setUserName('Shashank');
 
   return (
     <nav className='navbar' id = "navbar">
       <div className='container navbar-content flex'>
         <div className='brand-and-toggler flex flex-sb'>
+          
           <Link to = "/" className='navbar-brand flex'>
             <img src = {logoImg} alt = "site logo" />
-            <span className='text-uppercase fw-7 fs-24 ls-1'>Personal Bookshelf   </span>
+            <span className='text-uppercase fw-4 fs-20 ls-1' onClick={addUser}>BookWanderer</span>
           </Link>
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size = {35} style = {{
@@ -22,12 +28,10 @@ const Navbar = () => {
             }} />
           </button>
         </div>
-
         <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
           <ul className = "navbar-nav">
-
-            <li className='nav-item'>
-              <Link to = "shelf" className='nav-link text-uppercase fs-18 fw-5 ls-1'>My Shelf</Link>
+            <li className='navItem'>
+              <Link to = "shelf">My Shelf</Link>
             </li>
           </ul>
         </div>

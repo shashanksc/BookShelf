@@ -38,8 +38,12 @@ span{
 .show-navbar-collapse{
     transform: translateX(0);
 }
-.nav-item{
-    margin-bottom: 1.4rem;
+.navItem{
+    background-color: #ffffff;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav-link{
     transition: var(--transition);
@@ -48,7 +52,7 @@ span{
     color: var(--purple-color);
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 650px){
     .navbar-collapse{
         position: relative;
         height: auto;
