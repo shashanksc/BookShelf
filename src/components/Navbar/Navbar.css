@@ -26,7 +26,8 @@ span{
     right: 0;
     top: 0;
     z-index: 10;
-    background-color: rgba(0, 7, 65, 0.9);
+    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.9);
     height: 100%;
     width: 250px;
     display: flex;
@@ -37,8 +38,9 @@ span{
 .show-navbar-collapse{
     transform: translateX(0);
 }
+
 .navItem{
-    border: 1px solid black;
+    border: 1px solid grey;
     height: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -48,7 +50,6 @@ span{
 }
 .navItem:hover{
     cursor: pointer;
-    
     border : 1px solid blueviolet;
 }
 .nav-link{
@@ -63,6 +64,7 @@ span{
         position: relative;
         height: auto;
         padding: 0;
+        border:none;
         width: 100%;
         background-color: transparent;
         transform: translateX(0);

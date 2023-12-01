@@ -1,17 +1,12 @@
 .search-form1{ 
     display: block;
-    width: 40%;
-    border-radius: 15px;
+    width: 50%;
+    border-radius: 10px;
     background-color: rgb(0,0,0,0.8);
     transition: width 0.3s ease;
     border : 1px solid white;
 }
-.search-form1:hover{
-  cursor: pointer;
-  width: 45%;
-  background-color: rgb(0,0,0,0.75);
-  
-}
+
 
 .search-form2 {
   display: flex;
@@ -27,7 +22,7 @@
   height:5vh;
   background: transparent;
   color: whitesmoke;
-  font-size: 2.5rem;
+  font-size: 2rem;
    /* Adjust the margin as needed */
 }
 
@@ -41,12 +36,10 @@
 }
 @media screen and (min-width : 650px) {
   .search-form1{ 
-    display: block;
     width: 40%;
     border-radius: 15px;
-    background-color: pink;
     transition: width 0.3s ease;
-    border : 1px solid white;
+    
 }
 .search-form1:hover{
   cursor: pointer;
@@ -55,30 +48,13 @@
   
 }
 
-.search-form2 {
-  display: flex;
-  align-items: center;
-  
-  
-}
+
 
 .input {
-  margin-left: 10px;
-  margin-right: 20px;
-  width: 92%;
-  height:5vh;
-  background: white;
-  color: whitesmoke;
+  
   font-size: 2.5rem;
    /* Adjust the margin as needed */
 }
 
-.submit-btn {
-  background-color: transparent;
-  border: none;
-  position: relative;
-  float: right;
-  margin: 1rem;
-  
-}
+
 }
