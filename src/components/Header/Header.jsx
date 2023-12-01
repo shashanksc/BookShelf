@@ -14,7 +14,9 @@ const Header = () => {
                 </p>
                 <SearchForm />
             </div>
+            
         </header>
+        
     </div>
   )
 }

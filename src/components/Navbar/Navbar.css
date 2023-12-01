@@ -2,7 +2,6 @@ span{
     color: #261066;
 }
 .navbar{
-    padding: 1.8rem 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .navbar-brand{
@@ -27,7 +26,7 @@ span{
     right: 0;
     top: 0;
     z-index: 10;
-    background-color: rgba(0, 7, 65, 0.8);
+    background-color: rgba(0, 7, 65, 0.9);
     height: 100%;
     width: 250px;
     display: flex;
@@ -39,11 +38,18 @@ span{
     transform: translateX(0);
 }
 .navItem{
-    background-color: #ffffff;
-    height: 60px;
+    border: 1px solid black;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.navItem:hover{
+    cursor: pointer;
+    
+    border : 1px solid blueviolet;
 }
 .nav-link{
     transition: var(--transition);
