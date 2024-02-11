@@ -20,6 +20,7 @@ span{
 .navbar-toggler-btn{
     transition: var(--transition);
     z-index: 11;
+    
 }
 .navbar-collapse{
     position: fixed;
