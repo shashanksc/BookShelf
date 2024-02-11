@@ -1,13 +1,15 @@
-import React, {useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import React, {useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 import Loading from "../Loader/Loader";
 import coverImg from "../../images/cover_not_found.jpg";
-import "./BookDetails";
-import { useNavigate } from "react-router-dom";
+import "./BookDetails.css";
+import {FaArrowLeft} from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+
 const URL = "https://openLibrary.org/works/";
 
 const BookDetails = ()=>{
-    const {id} = useParams;
+    const {id} = useParams();
     const [loading, setLoading] = useState(false);
     const [book, setBook] = useState(null);
     const navigate = useNavigate();
@@ -16,7 +18,7 @@ const BookDetails = ()=>{
         setLoading(true);
         async function getBookDetails(){
           try{
-            const response = await fetch(`${URL}OL45804W.json`);// somehow i can't get the proper ID
+            const response = await fetch(`${URL}${id}.json`);// somehow i can't get the proper ID
             const data = await response.json();
             console.log(data);
     
@@ -44,6 +46,42 @@ const BookDetails = ()=>{
       }, [id]);
 
     console.log(book);
-    return(<div>Book Details</div>);
-}
-export default BookDetails;
+    return (
+      <section className='book-details'>
+        <div className='container'>
+          <button type='button' className='flex flex-c back-btn' onClick={() => navigate("/book")}>
+            <FaArrowLeft size = {22} />
+            <span className='fs-18 fw-6'>Go Back</span>
+          </button>
+  
+          <div className='book-details-content grid'>
+            <div className='book-details-img'>
+              <img src = {book?.cover_img} alt = "cover img" />
+            </div>
+            <div className='book-details-info'>
+              <div className='book-details-item title'>
+                <span className='fw-6 fs-24'>{book?.title}</span>
+              </div>
+              <div className='book-details-item description'>
+                <span>{book?.description}</span>
+              </div>
+              <div className='book-details-item'>
+                <span className='fw-6'>Subject Places: </span>
+                <span className='text-italic'>{book?.subject_places}</span>
+              </div>
+              <div className='book-details-item'>
+                <span className='fw-6'>Subject Times: </span>
+                <span className='text-italic'>{book?.subject_times}</span>
+              </div>
+              <div className='book-details-item'>
+                <span className='fw-6'>Subjects: </span>
+                <span>{book?.subjects}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+  
+  export default BookDetails
