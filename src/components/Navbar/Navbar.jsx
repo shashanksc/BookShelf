@@ -20,7 +20,7 @@ const Navbar = () => {
           
           <Link to = "/" className='navbar-brand flex'>
             <img className="navLogo" src = {logoImg} alt = "site logo" />
-            <span className='text-uppercase fw-4 fs-20 ls-1' onClick={addUser}>BookWanderer</span>
+            <span className='text-uppercase fw-4 fs-20 ls-1' onClick={addUser}>BookWanderers</span>
           </Link>
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size = {35} style = {{
