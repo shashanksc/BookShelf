@@ -45,7 +45,8 @@ const BookDetails = ()=>{
         getBookDetails();
       }, [id]);
 
-    console.log(book);
+    if(loading) return <Loading />;
+    
     return (
       <section className='book-details'>
         <div className='container'>
