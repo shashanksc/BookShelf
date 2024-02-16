@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import {
-  BrowserRouter, Routes, Route
+  BrowserRouter as Router,
+  Routes,
+  Route
 } from 'react-router-dom';
 import { AppProvider } from './context';
 import './index.css';
@@ -10,19 +12,16 @@ import Shelf from "./pages/Shelf/Shelf";
 import BookList from "./components/BookList/BookList";
 import BookDetails from "./components/BookDetails/BookDetails";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <AppProvider>
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path = "/" element = {<Home />}>
-          <Route path = "shelf" element = {<Shelf />} />
-          <Route path = "book" element = {<BookList />} />
-          <Route path = "/book/:id" element = {<BookDetails />} />
-          
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/shelf" element={<Shelf />} />
+        <Route path="/book" element={<BookList />} />
+        <Route path="/book/:id" element={<BookDetails />} />
       </Routes>
-    </BrowserRouter>
-  </AppProvider>
+    </Router>
+  </AppProvider>,
+  document.getElementById('root')
 );
