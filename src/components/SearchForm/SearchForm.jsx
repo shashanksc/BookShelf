@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import {FaSearch} from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../../context';
+import { useGlobalContext } from '../../context.';
 import "./SearchForm.css";
 
 const SearchForm = () => {
@@ -10,14 +10,11 @@ const SearchForm = () => {
   const navigate = useNavigate();
 
   useEffect(() => searchText.current.focus(), []);
-  const handleOnChange = (event) =>{
-    setSearchTerm(event.target.value)
-  }
   const handleSubmit = (e) => {
     e.preventDefault();
     let tempSearchTerm = searchText.current.value.trim();
     if((tempSearchTerm.replace(/[^\w\s]/gi,"")).length === 0){
-      setSearchTerm("Sherlock");
+      setSearchTerm("the lost world");
       setResultTitle("Please Enter Something ...");
     } else {
       setSearchTerm(searchText.current.value);
@@ -30,16 +27,15 @@ const SearchForm = () => {
     <div className='search-form1'>
       
         
-          <form className='search-form2' onSubmit={handleSubmit}>
-              <input type = "text" className='input' onChange = {handleOnChange} placeholder='Sherlock ...' ref = {searchText} />
-              <button type = "submit" className='submit-btn' onClick={handleSubmit}>
-                <FaSearch className='text-white' size = {32} />
-              </button>
-            
-          </form>
-        
-      </div>
-    
+    <form className='search-form2' onSubmit={handleSubmit}>
+        <input type = "text" className='input' placeholder='Sherlock ...' ref = {searchText} />
+        <button type = "submit" className='submit-btn' onClick={handleSubmit}>
+          <FaSearch className='text-white' size = {32} />
+        </button>
+      
+    </form>
+  
+</div>
   )
 }
 

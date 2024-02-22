@@ -6,21 +6,15 @@ import {HiOutlineMenuAlt3} from "react-icons/hi";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [userName, setUserName] = useState('');
   const handleNavbar = () => setToggleMenu(!toggleMenu);
-  if(userName==='') {
-    console.log('User not specified');
-  }
-  const addUser = () => setUserName('Shashank');
 
   return (
     <nav className='navbar' id = "navbar">
       <div className='container navbar-content flex'>
         <div className='brand-and-toggler flex flex-sb'>
-          
           <Link to = "/" className='navbar-brand flex'>
-            <img className="navLogo" src = {logoImg} alt = "site logo" />
-            <span className='text-uppercase fw-4 fs-20 ls-1' onClick={addUser}>BookWanderer</span>
+            <img src = {logoImg} alt = "site logo" />
+            <span className='text-uppercase fw-7 fs-24 ls-1'>BookWanderer</span>
           </Link>
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size = {35} style = {{
@@ -28,11 +22,19 @@ const Navbar = () => {
             }} />
           </button>
         </div>
+
         <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
           <ul className = "navbar-nav">
             <li className='navItem'>
+              <Link to = "/" >Home</Link>
+            </li>
+            <li className='navItem'>
               <Link to = "shelf">My Shelf</Link>
             </li>
+            <li className='navItem'>
+              <Link to = "about">about</Link>
+            </li>
+            
           </ul>
         </div>
       </div>
