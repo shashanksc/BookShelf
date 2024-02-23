@@ -2,7 +2,7 @@
     display: block;
     width: 50%;
     border-radius: 10px;
-    background-color: rgb(0,0,0,0.8);
+    background-color: rgb(0,0,0,0.3);
     transition: width 0.3s ease;
     border : 1px solid white;
 }
@@ -43,13 +43,10 @@
 }
 .search-form1:hover{
   cursor: pointer;
-  width: 45%;
-  background-color: rgb(0,0,0,0.75);
+  
+  background-color: rgba(0, 0, 0, 0.5);
   
 }
-
-
-
 .input {
   
   font-size: 2.5rem;
