@@ -4,9 +4,30 @@
     text-align: center;
   }
   
-  .footer a {
-    margin: 0;
-    font-size: 14px;
-    color: #6c757d;
+  .section_text_p1 {
+    font-size: 18px;
+    color: #333;
   }
+  
+  .contact-info-upper-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .contact-info-container {
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon {
+    width: 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ 
+ 
   
