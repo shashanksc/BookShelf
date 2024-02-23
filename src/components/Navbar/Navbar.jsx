@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className='brand-and-toggler flex flex-sb'>
           <Link to = "/" className='navbar-brand flex'>
             <img className='logo' src = {logoImg} alt = "site logo" />
-            <span className='text-uppercase fw-7 fs-24 ls-1'>BookWanderer</span>
+            <span className='text-uppercase fw-2 fs-24 ls-1'>BookWanderer</span>
           </Link>
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size = {35} style = {{
@@ -25,13 +25,13 @@ const Navbar = () => {
 
         <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
           <ul className = "navbar-nav">
-            <li className='navItem'>
+            <li className='navHorItem'>
               <Link to = "/" >Home</Link>
             </li>
-            <li className='navItem'>
+            <li className='navHorItem'>
               <Link to = "shelf">My Shelf</Link>
             </li>
-            <li className='navItem'>
+            <li className='navHorItem'>
               <Link to = "about">about</Link>
             </li>
             
