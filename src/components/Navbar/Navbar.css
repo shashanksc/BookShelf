@@ -12,7 +12,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    margin: 5px;
 }
 
 .navbar{
@@ -43,11 +43,12 @@ span{
     right: 0;
     top: 0;
     z-index: 10;
-    border: 1px solid grey;
-    background-color: rgba(74, 93, 150, 0.8);
+    border-left: 2px solid #261066;
+    background-color: rgba(75, 72, 149, 0.9);
     height: 100%;
-    width: 250px;
+    width: 180px;
     display: flex;
+    justify-content: center;
     padding: 8rem 2rem 0 2rem;
     transform: translatex(100%);
     transition: var(--transition);
@@ -59,7 +60,7 @@ span{
 .navItem{
     border: 1px solid grey;
     height: 25px;
-    margin: 3px 3px;
+    margin: 5px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
