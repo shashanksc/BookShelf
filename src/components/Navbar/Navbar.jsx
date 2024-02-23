@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className='container navbar-content flex'>
         <div className='brand-and-toggler flex flex-sb'>
           <Link to = "/" className='navbar-brand flex'>
-            <img src = {logoImg} alt = "site logo" />
+            <img className='logo' src = {logoImg} alt = "site logo" />
             <span className='text-uppercase fw-7 fs-24 ls-1'>BookWanderer</span>
           </Link>
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>

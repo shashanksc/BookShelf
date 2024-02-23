@@ -1,6 +1,11 @@
 span{
     color: #261066;
 }
+.logo{
+    width: 70%;
+    height: 70%;
+    border: 3px solid black;
+}
 .navbar{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
@@ -21,6 +26,7 @@ span{
 .navbar-toggler-btn{
     transition: var(--transition);
     z-index: 11;
+   
     
 }
 .navbar-collapse{
@@ -29,7 +35,7 @@ span{
     top: 0;
     z-index: 10;
     border: 1px solid grey;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(74, 93, 150, 0.8);
     height: 100%;
     width: 250px;
     display: flex;
@@ -44,7 +50,7 @@ span{
 .navItem{
     border: 1px solid grey;
     height: 25px;
-    margin: 0px 3px;
+    margin: 3px 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +67,7 @@ span{
 }
 
 @media screen and (min-width: 650px){
+   
     .navbar-collapse{
         position: relative;
         height: auto;
