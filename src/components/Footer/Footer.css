@@ -1,36 +1,40 @@
 .footer {
+    
+    
     background-color: #f8f9fa;
     padding: 20px 0;
-    color:#333;
+    color:#888;
+    height: 150px;
     text-align: center;
-  }
- 
-  .footer a:hover{
-    
-    text-decoration: underline;
   }
   
   .section_text_p1 {
-    font-size: 18px;
-    color: #333;
+    margin: 4pxs;
+    font-size: 20px;
+    color: #444;
   }
   
   .contact-info-upper-container {
+    width: 800px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    
+    
   }
   
   .contact-info-container {
     margin: 0 10px;
+   
     justify-content: center;
     align-items: center;
   }
   
   .icon {
-    width: 2.5rem;
+    width: 3rem;
     align-items: center;
+    margin : 0px auto;
     justify-content: center;
   }
   
