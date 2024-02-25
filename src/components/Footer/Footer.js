@@ -27,10 +27,10 @@ function Footer() {
         <p className="section_text_p1">Other Projects</p>
         <div className="contact-info-upper-container">
             <div className="contact-info-container">
-                <a href="URL_OF_YOUR_OTHER_PROJECT_1" target="_blank">Poll App</a>
+                <a href="https://pollapp12.netlify.app/" target="_blank">Poll App</a>
             </div>
             <div className="contact-info-container">
-                <a href="URL_OF_YOUR_OTHER_PROJECT_2" target="_blank">Curreny Converter</a>
+                <a href="https://currency1convapp.netlify.app/" target="_blank">Curreny Converter</a>
             </div>
         </div>
     </footer>
