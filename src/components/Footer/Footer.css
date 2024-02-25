@@ -1,6 +1,4 @@
 .footer {
-    
-    
     background-color: #f8f8ff;
     padding: 20px 0;
     color:#888;
@@ -9,9 +7,9 @@
   }
   
   .section_text_p1 {
-    margin: 4pxs;
-    font-size: 15px;
-    color: #444;
+    
+    font-size: 2vh;
+    color: #828080;
   }
   
   .contact-info-upper-container {
@@ -19,14 +17,16 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    
-    
+    /* margin-top: px; */
+    font-size: 1.5vh;
+  }
+  .contact-info-upper-container :hover{
+    text-decoration: underline;
+    color: blueviolet;
   }
   
   .contact-info-container {
     margin: 0 10px;
-   
     justify-content: center;
     align-items: center;
   }
@@ -37,7 +37,10 @@
     margin : 0px auto;
     justify-content: center;
   }
-  
+  .icon:hover{
+    opacity: 0.7;
+  }
+
  
  
   
