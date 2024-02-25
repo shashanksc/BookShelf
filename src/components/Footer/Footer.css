@@ -1,16 +1,16 @@
 .footer {
     
     
-    background-color: #f8f9fa;
+    background-color: #f8f8ff;
     padding: 20px 0;
     color:#888;
-    height: 150px;
+    
     text-align: center;
   }
   
   .section_text_p1 {
     margin: 4pxs;
-    font-size: 20px;
+    font-size: 15px;
     color: #444;
   }
   
@@ -19,7 +19,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
     
     
   }
@@ -32,7 +32,7 @@
   }
   
   .icon {
-    width: 3rem;
+    width: 2rem;
     align-items: center;
     margin : 0px auto;
     justify-content: center;

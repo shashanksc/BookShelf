@@ -12,7 +12,7 @@ function Footer() {
         <div class="contact-info-upper-container">
         <div class="contact-info-container">
     <a href="mailto:fvyrtyler@gmail.com">
-        <img src={emailImg} alt="email icon" style={{width: '3.6rem'}} className="icon contact-icon email-icon" />
+        <img src={emailImg} alt="email icon" style={{width: '2.5rem'}} className="icon contact-icon email-icon" />
     </a>
 </div>
 <div class="contact-info-container">
@@ -25,9 +25,12 @@ function Footer() {
         <img src={gitImg} alt="github icon" className="icon contact-icon" />
     </a>
 </div>
-
-        </div>
-   
+</div>
+<p className="section_text_p1">Other Projects</p>
+    <div className="other-projects-container">
+        <a href="URL_OF_YOUR_OTHER_PROJECT_1" target="_blank">Project 1</a>
+        <a href="URL_OF_YOUR_OTHER_PROJECT_2" target="_blank">Project 2</a>
+    </div>
 </footer>
 
   );
