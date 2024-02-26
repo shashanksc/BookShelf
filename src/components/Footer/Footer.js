@@ -10,7 +10,7 @@ function Footer() {
         <div className="contact-info-upper-container">
             <div className="contact-info-container">
                 <a href="mailto:fvyrtyler@gmail.com">
-                    <img src={emailImg} alt="email icon" style={{width: '2.5rem'}} className="icon contact-icon email-icon" />
+                    <img src={emailImg} alt="email icon" style={{width: '2.5rem'}} className="icon contact-icon email-icon"/>
                 </a>
             </div>
             <div className="contact-info-container">
