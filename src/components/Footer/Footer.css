@@ -1,46 +1,63 @@
 .footer {
-    background-color: #f8f8ff;
-    padding: 20px 0;
-    color:#888;
-    
-    text-align: center;
-  }
-  
-  .section_text_p1 {
-    
-    font-size: 2vh;
-    color: #828080;
-  }
-  
-  .contact-info-upper-container {
-    width: 800px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: px; */
-    font-size: 1.5vh;
-  }
-  .contact-info-upper-container :hover{
-    text-decoration: underline;
-    color: blueviolet;
-  }
-  
-  .contact-info-container {
-    margin: 0 10px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icon {
-    width: 2rem;
-    align-items: center;
-    margin : 0px auto;
-    justify-content: center;
-  }
-  .icon:hover{
-    opacity: 0.7;
-  }
+  background-color: #f8f8ff;
+  padding: 20px 0;
+  color: #888;
+  text-align: center;
+}
 
- 
- 
+.section_text_p1 {
+  font-size: 2vh;
+  color: #828080;
+}
+
+.contact-info-upper-container {
+  width: 100%; /* Adjusted width to make it responsive */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vh;
+}
+
+.contact-info-upper-container a {
+  text-decoration: none; /* Ensure links have no underline */
+  color: #888; /* Set default link color */
+  transition: color 0.3s ease; /* Add transition effect for color change */
+}
+
+.contact-info-upper-container a:hover {
+  color: blueviolet; /* Change link color on hover */
+}
+
+.contact-info-container {
+  margin: 0 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 2rem;
+  margin: 0 auto; /* Center align the icon */
+  justify-content: center;
+  display: flex; /* Ensure the icon is a flex container */
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+
+/* Additional styles for responsiveness */
+@media screen and (max-width: 768px) {
+  .contact-info-upper-container {
+      flex-wrap: wrap;
+  }
+  .contact-info-container {
+      padding: 5px; 
+      margin:10px 0;
+      width: 100%;
+      
+  }
+  .section_text_p1 {
+      font-size: 1.5vh; /* Adjust font size for smaller screens */
+  }
   
+}
