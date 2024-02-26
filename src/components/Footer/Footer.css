@@ -7,25 +7,42 @@
 
 .section_text_p1 {
   font-size: 2vh;
-  color: #828080;
+  margin-top: 10px;
+  cursor: default;
+  color: #777777;
 }
 
 .contact-info-upper-container {
+  width: 100%; /* Adjusted width to make it responsive */
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vh;
+}
+.project-info-upper-container {
   width: 100%; /* Adjusted width to make it responsive */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5vh;
 }
+.project-info-container {
+  margin: 0 10px;
+  justify-content: center;
+  align-items: center;
+  color:#797979;
+}
 
-.contact-info-upper-container a {
+.project-info-upper-container a {
   text-decoration: none; /* Ensure links have no underline */
-  color: #888; /* Set default link color */
+  color: #5a5959; /* Set default link color */
   transition: color 0.3s ease; /* Add transition effect for color change */
 }
 
-.contact-info-upper-container a:hover {
+.project-info-upper-container a:hover {
   color: blueviolet; /* Change link color on hover */
+  text-decoration: underline;
 }
 
 .contact-info-container {
@@ -47,17 +64,19 @@
 
 /* Additional styles for responsiveness */
 @media screen and (max-width: 768px) {
-  .contact-info-upper-container {
+  .project-info-upper-container {
       flex-wrap: wrap;
+      margin: 0, 5px;
   }
-  .contact-info-container {
+  .project-info-container {
       padding: 5px; 
-      margin:10px 0;
+      
       width: 100%;
       
   }
   .section_text_p1 {
       font-size: 1.5vh;
+      margin-top: 5px;
   }
   
 }

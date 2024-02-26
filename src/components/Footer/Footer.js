@@ -25,11 +25,11 @@ function Footer() {
             </div>
         </div>
         <p className="section_text_p1">Other Projects</p>
-        <div className="contact-info-upper-container">
-            <div className="contact-info-container">
+        <div className="project-info-upper-container">
+            <div className="project-info-container">
                 <a href="https://pollapp12.netlify.app/" target="_blank"rel="noreferrer">Poll App</a>
             </div>
-            <div className="contact-info-container">
+            <div className="project-info-container">
                 <a href="https://currency1convapp.netlify.app/" target="_blank"rel="noreferrer">Curreny Converter</a>
             </div>
         </div>
