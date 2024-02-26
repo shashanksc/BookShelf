@@ -14,12 +14,12 @@ function Footer() {
                 </a>
             </div>
             <div class="contact-info-container">
-                <a href="https://www.linkedin.com/in/shashank-saurabh-a42816190/" target="_blank">
+                <a href="https://www.linkedin.com/in/shashank-saurabh-a42816190/" target="_blank"rel="noreferrer">
                     <img src={linkedinImg} alt="linkedin icon" className="icon contact-icon" />
                 </a>
             </div>
             <div class="contact-info-container">
-                <a href="https://github.com/shashanksc" target="_blank">
+                <a href="https://github.com/shashanksc" target="_blank"rel="noreferrer">
                     <img src={gitImg} alt="github icon" className="icon contact-icon" />
                 </a>
             </div>
@@ -27,10 +27,10 @@ function Footer() {
         <p className="section_text_p1">Other Projects</p>
         <div className="contact-info-upper-container">
             <div className="contact-info-container">
-                <a href="https://pollapp12.netlify.app/" target="_blank">Poll App</a>
+                <a href="https://pollapp12.netlify.app/" target="_blank"rel="noreferrer">Poll App</a>
             </div>
             <div className="contact-info-container">
-                <a href="https://currency1convapp.netlify.app/" target="_blank">Curreny Converter</a>
+                <a href="https://currency1convapp.netlify.app/" target="_blank"rel="noreferrer">Curreny Converter</a>
             </div>
         </div>
     </footer>
