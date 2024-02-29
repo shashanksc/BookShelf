@@ -1,24 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useGlobalContext } from '../../context.';
 import Book from "../BookList/Book";
 import Loading from "../Loader/Loader";
 import coverImg from "../../images/cover_not_found.jpg";
-import "./BookList.css";
-
-//https://covers.openlibrary.org/b/id/240727-S.jpg
+import Modal from '../UI/Modal/Modal';
+import Backdrop from '../UI/Backdrop/Backdrop';
+import './BookList.css';
 
 const BookList = () => {
-  const {books, loading, resultTitle} = useGlobalContext();
+  const { books, loading, resultTitle } = useGlobalContext();
+  
+  const [showModal, setShowModal] = useState(false);
+  const [addedBook, setAddedBook] = useState(null);
+
+  const closeModal = () => {
+    setShowModal(false);
+    setAddedBook(null);
+  };
+
+  const handleBookAdded = (book) => {
+    if (localStorage.getItem(book.id) !== null) {
+      alert('Book is already added');
+    } else {
+      localStorage.setItem(book.id, book.title);
+      setAddedBook(book);
+      setShowModal(true);
+    }
+  };
+
   const booksWithCovers = books.map((singleBook) => {
     return {
       ...singleBook,
-      // removing /works/ to get only id
-      id: (singleBook.id).replace("/works/", ""),
+      id: singleBook.id.replace("/works/", ""),
       cover_img: singleBook.cover_id ? `https://covers.openlibrary.org/b/id/${singleBook.cover_id}-L.jpg` : coverImg
     }
   });
 
-  if(loading) return <Loading />;
+  if (loading) return <Loading />;
 
   return (
     <section className='booklist'>
@@ -30,14 +48,23 @@ const BookList = () => {
           {
             booksWithCovers.slice(0, 30).map((item, index) => {
               return (
-                <Book key = {index} {...item} />
+                <Book key={index} book={item} onBookAdded={()=>handleBookAdded(item)} />
               )
             })
           }
         </div>
       </div>
+      {showModal && (
+        <>
+          <Backdrop show={showModal} clicked={closeModal} />
+          <Modal show={showModal} modalClosed={closeModal}>
+            <h2>{addedBook ? addedBook.title : ''}</h2>
+            <p>has been added to your shelf.</p>
+          </Modal>
+        </>
+      )}
     </section>
   )
 }
 
-export default BookList
+export default BookList;
