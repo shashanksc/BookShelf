@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useGlobalContext } from '../../context.';
 import Book from "../BookList/Book";
 import Loading from "../Loader/Loader";
-import coverImg from "../../images/cover_not_found.jpg";
 import Modal from '../UI/Modal/Modal';
 import Backdrop from '../UI/Backdrop/Backdrop';
 import './BookList.css';
@@ -32,7 +31,7 @@ const BookList = () => {
     return {
       ...singleBook,
       id: singleBook.id.replace("/works/", ""),
-      cover_img: singleBook.cover_id ? `https://covers.openlibrary.org/b/id/${singleBook.cover_id}-L.jpg` : coverImg
+      cover_id: singleBook.cover_id
     }
   });
 
