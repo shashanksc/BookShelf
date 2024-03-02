@@ -11,6 +11,7 @@ const Modal =(props)=>{
         <div 
             className="Modal"
             >
+                <div className="close">X</div>
                 {props.children}
         </div>
     </Aux>);
