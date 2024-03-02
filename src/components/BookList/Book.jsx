@@ -73,7 +73,7 @@ const Book = ({ book, onBookAdded }) => {
         <div>
         {!localStorage.getItem(book.id) && (
           <div className="addBtn" onClick={handleAddBook}>
-            Add
+            +
           </div>
         )}
       </div>

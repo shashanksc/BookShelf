@@ -13,6 +13,7 @@
     transition: var(--transition);
 }
 .book-item:hover{
+    border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.4) 2px 10px 30px 2px;
 }
 .book-item-img img{
@@ -35,17 +36,30 @@
     backdrop-filter: blur(5px); /* Adding blur effect */
 }
 .addBtn{
-    margin: 0% auto;
-    border-radius: 20px;
-    width: 50px;
-    padding: 4px;
+    
+    outline: 0;
     cursor: pointer;
-    background: #4c2b9f;
-    color:#fff;
+    border: none;
+    text-align: center;
+    height: 44px;
+    color: #211936;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    font-size: 24px;
+    box-shadow: 0 4px 10px 0 rgba(68, 0, 255, 0.3);
+    transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+    margin: 0% auto;
+    width: 44px;
+    padding: 4px;
+   
 }
 .addBtn:hover{
-    background: #684daa;
-    color:#fff;
+    font-weight: 600;
+    border-radius: 7px;
+    color: #701ce6;
+    
+    box-shadow: 0 4px 10px 0 rgba(50, 0, 213, 0.3);
+    transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
 }
 .book-item-info-item.title{
     line-height: 1.4;

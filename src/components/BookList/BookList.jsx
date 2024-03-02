@@ -57,8 +57,8 @@ const BookList = () => {
         <>
           <Backdrop show={showModal} clicked={closeModal} />
           <Modal show={showModal} modalClosed={closeModal}>
-            <h2>{addedBook ? addedBook.title : ''}</h2>
-            <p>has been added to your shelf.</p>
+            <h4>{addedBook ? addedBook.title : ''}</h4>
+            <p> has been added to your shelf.</p>
           </Modal>
         </>
       )}

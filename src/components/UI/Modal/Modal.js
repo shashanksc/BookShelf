@@ -11,8 +11,11 @@ const Modal =(props)=>{
         <div 
             className="Modal"
             >
-                <div className="close">X</div>
+                <span 
+                    className="close"
+                    onClick={props.modalClosed}>x</span>
                 {props.children}
+                
         </div>
     </Aux>);
 
