@@ -47,7 +47,8 @@ const Book = ({ book, onBookAdded }) => {
   };
 
   return (
-    <div className="book-item flex flex-column flex-sb" >
+    <div className="book-item flex flex-column flex-sb"  >
+      <Link to={`/book/${book.id}`} {...book}>
       <div className="book-item-img">
         {loadingCover ? (
           <Loader/>
@@ -55,6 +56,7 @@ const Book = ({ book, onBookAdded }) => {
           <img src={book.cover_img} alt="cover" />
         )}
       </div>
+      </Link>
       <div className="newDiv" style={{ background: `url(${book.cover_img})center center`, backgroundSize: 'cover' }}>
         <div className="book-item-info text-center" >
           <Link to={`/book/${book.id}`} {...book}>

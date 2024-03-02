@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "./Shelf.css";
+import {FaArrowLeft} from "react-icons/fa";
 import shelfImg from "../../images/shelf.jpg";
-
+import { useNavigate } from 'react-router-dom';
 const About = () => {
   const [localStorageValues, setLocalStorageValues] = useState([]);
+  const navigate = useNavigate();
   const remove = (keyToRemove) => {
     localStorage.removeItem(keyToRemove);
     // Update the component's state to reflect the removal
@@ -33,7 +35,10 @@ const About = () => {
         <div className='section-title'>
           <h2>My Shelf</h2>
         </div>
-
+        <button type='button' className='flex flex-c back-btn' onClick={() => navigate("/book")}>
+          <FaArrowLeft size = {22} />
+          <span className='fs-18 fw-6'>Go Back</span>
+        </button>
         <div className='about-content grid'>
           <div className='about-img'>
             <img src = {shelfImg} alt = "" />
