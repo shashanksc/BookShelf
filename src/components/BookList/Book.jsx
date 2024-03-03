@@ -61,7 +61,7 @@ const Book = ({ book, onBookAdded }) => {
         <div className="book-item-info text-center" >
           <Link to={`/book/${book.id}`} {...book}>
             <div className="book-item-info-item title fw-7 fs-18">
-              <span>{book.title}</span>
+              <span>{book.title.length > 40 ? `${book.title.slice(0, 40)}...` : book.title}</span>
             </div>
           </Link>
           <div className="book-item-info-item edition-count fs-15">
