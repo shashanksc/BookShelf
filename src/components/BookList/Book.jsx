@@ -47,7 +47,7 @@ const Book = ({ book, onBookAdded }) => {
   };
 
   return (
-    <div className="book-item flex flex-column flex-sb"  >
+    <div className="book-item flex flex-column flex-sb">
       <Link to={`/book/${book.id}`} {...book}>
       <div className="book-item-img">
         {loadingCover ? (
@@ -57,8 +57,12 @@ const Book = ({ book, onBookAdded }) => {
         )}
       </div>
       </Link>
-      <div className="newDiv" style={{ background: `url(${book.cover_img})center center`, backgroundSize: 'cover' }}>
-        <div className="book-item-info text-center" >
+      <div className="newDiv" style={{
+            backgroundImage: `url(${book.cover_img})`,
+            backgroundPosition: 'center center',
+            backgroundSize: 'cover'
+          }}>
+        <div className="book-item-info" >
           <Link to={`/book/${book.id}`} {...book}>
             <div className="book-item-info-item title fw-7 fs-18">
               <span>{book.title.length > 40 ? `${book.title.slice(0, 40)}...` : book.title}</span>
@@ -72,14 +76,14 @@ const Book = ({ book, onBookAdded }) => {
             <span className="text-capitalize fw-7">First Publish Year: </span>
             <span>{book.first_publish_year}</span>
           </div>
-        <div>
-        {!localStorage.getItem(book.id) && (
-          <div className="addBtn" onClick={handleAddBook}>
-            +
+          <div>
+          {!localStorage.getItem(book.id) && (
+            <div className="addBtn" onClick={handleAddBook}>
+              +
+            </div>
+          )}
           </div>
-        )}
-      </div>
-      </div>
+        </div>
       </div>
       
     </div>
